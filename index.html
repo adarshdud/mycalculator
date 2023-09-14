@@ -1,0 +1,122 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculatorcss.css">
+</head>
+<body>
+    <section class="calculator">
+        <form>
+            <input type="text" class="screen">
+        </form>
+        <div class="buttons">
+            <button type="button" class="btn btn-yellow" data-num="*">*</button>
+            <button type="button" class="btn btn-yellow" data-num="/">/</button>
+            <button type="button" class="btn btn-yellow" data-num="-">-</button>
+            <button type="button" class="btn btn-yellow" data-num="+">+</button>
+            <button type="button" class="del" data-num="del">del</button>
+
+
+            <button type="button" class="btn btn-grey" data-num="9">9</button>
+            <button type="button" class="btn btn-grey" data-num="8">8</button>
+            <button type="button" class="btn btn-grey" data-num="7">7</button>
+            <button type="button" class="btn btn-grey" data-num="6">6</button>
+            <button type="button" class="btn btn-grey" data-num="5">5</button>
+            <button type="button" class="btn btn-grey" data-num="4">4</button>
+            <button type="button" class="btn btn-grey" data-num="3">3</button>
+            <button type="button" class="btn btn-grey" data-num="2">2</button>
+            <button type="button" class="btn btn-grey" data-num="1">1</button>
+            <button type="button" class="btn btn-grey" data-num="0">0</button>
+            <button type="button" class="btn btn-grey" data-num=".">.</button>
+
+            <button type="button" class=" btn-equal">=</button>
+            <button type="button" class=" btn-clear">c</button>
+
+
+        </div>
+    </section>
+    <script src="C:\Users\user\Desktop\calculator\calculatorjs.js"></script>
+</body>
+</html> -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="favicon.ico">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculatorcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <!-- <link rel="stylesheet" href="C:\Users\user\Desktop\calculator\fontawesome-free-6.2.1-web/css/all.css"> -->
+</head>
+<body>
+    <section class="calculator">
+        <form>
+            <input type="text" id="result" placeholder="0">
+        </form>
+        <div class="buttons">
+            <button type="button" class=" btn-clear btn-yellow" onclick="Allclear()">AC</button>
+            <button type="button" class=" btn-clear btn-yellow" onclick="del()"><i class="fa-solid fa-delete-left"></i></button>
+            <button type="button" class="btn btn-yellow" id="perc" onclick="display('%')"><i class="fa-light fa-percent"></i></button>
+            <button type="button" class="btn btn-yellow" onclick="display('/')"><i class="fa-solid fa-divide"></i></button>
+
+
+
+            <button type="button" class="btn btn-grey" onclick="display('7')">7</button>
+            <button type="button" class="btn btn-grey" onclick="display('8')">8</button>
+            <button type="button" class="btn btn-grey" onclick="display('9')">9</button>
+            <button type="button" class="btn btn-yellow" onclick="display('*')"><i class="fa-solid fa-xmark"></i></button>
+
+
+
+            <button type="button" class="btn btn-grey" onclick="display('4')">4</button>
+            <button type="button" class="btn btn-grey" onclick="display('5')">5</button>
+            <button type="button" class="btn btn-grey" onclick="display('6')">6</button>
+            <button type="button" class="btn btn-yellow" onclick="display('-')"><i class="fa-solid fa-minus"></i></button>
+
+
+            
+            <button type="button" class="btn btn-grey" onclick="display('1')">1</button>
+            <button type="button" class="btn btn-grey" onclick="display('2')">2</button>
+            <button type="button" class="btn btn-grey" onclick="display('3')">3</button>
+            <button type="button" class="btn btn-yellow" onclick="display('+')"><i class="fa-solid fa-plus"></i></button>
+
+
+
+            <button type="button" class="btn btn-grey" onclick="display('00')">00</button>
+            <button type="button" class="btn btn-grey" onclick="display('0')">0</button>
+            <button type="button" class="btn btn-grey" onclick="display('.')">.</button>
+            <button type="button" class=" btn-equal" onclick="calculate()"><i class="fa-solid fa-equals"></i></button>
+        </div>
+    </section>
+    <script src="calculatorjs.js"></script>
+<!-- <script>
+    var result=document.getElementById("result");       
+    function display(number){
+        result.value+=number;
+    }
+
+    function calculate(){
+        var final_number=result.value;
+        var final_result=eval(final_number);
+        result.value=final_result;
+    }
+
+    function Allclear(){
+        result.value="";
+    }
+    function del(){
+        result.value=result.value.slice(0,-1);
+    }
+
+    let per=document.getElementById("perc");
+    per.addEventListener('click',function(e){
+    result.value=eval(result.value.replace("%","/100"));
+    })
+</script> -->
+</body>
+</html>
+
